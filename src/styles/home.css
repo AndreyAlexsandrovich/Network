@@ -1,0 +1,148 @@
+@import '@components/post/post.css';
+@import '@components/popup/popup.css';
+
+.main-container {
+    max-width: 900px;
+    max-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile {
+    background-color: #fff;
+}
+
+.profile-content { 
+    display: flex;
+    gap: 30px;
+    padding: 3px;
+    align-items: start;
+}
+
+.profile__image-wrapper {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-edit-button { 
+    cursor: pointer;
+    background-color: #4299e1;
+    color: #ffff;
+    padding: 5px;
+    width: 100%;
+    transition: background-color .2s ease-in-out;
+}
+
+.profile-edit-button:hover { 
+    background-color: #3881bd;
+    transition: background-color .1s ease-in-out;
+}
+
+.profile__image-wrapper img {
+    object-fit: cover;
+}
+
+.profile-head {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.profile-head .person-info {
+    gap: 0;
+}
+
+.profile-name {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.profession {
+    font-size: 10px;
+    font-weight: 400;
+    color: #757575;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title-about-me {
+    color: var(--color-main);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.description-about-me {
+    font-size: 14px;
+    color: var(--color-main);
+    max-width: 600px;
+}
+
+.published-post__title { 
+    color: #ffffff96;
+    font-weight: 400;
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 10px; 
+}
+
+.published-post__title i { 
+    font-size: 18px;
+    color: #ffff;
+}
+
+.published-post__title h3{ 
+ font-size: 16px;
+ color: #ffff;
+}
+
+.post-content-area {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-add-post { 
+    background-color: #4299e1;
+    color: #ffff;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 1px;
+    width: 20%;
+    margin: 6px;
+}
+
+textarea { 
+    width: 80%;
+    height: 100%;
+    padding: 5px;
+    word-break: break-all;
+    white-space: normal;
+    overflow: hidden;
+    resize: none;
+}
+
+textarea:focus { 
+    outline: none;
+}
+
+.posts { 
+    height: 100vh;
+}

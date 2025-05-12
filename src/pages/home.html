@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SVG -->
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    <!-- Icon -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Tailwind -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Css styles -->
+    <link rel="stylesheet" href="../styles/globals.css" />
+    <link rel="stylesheet" href="../fonts/fonts.css" />
+    <link rel="stylesheet" href="../variables/variables.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <title>Network</title>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+  </head>
+  <body class="wrapper">
+    <div class="sidebar close">
+      <div class="container">
+        <div class="menu-btn">
+          <i
+            class="ph ph-arrow-fat-lines-left text-purple-600 hover:text-purple-800"
+          ></i>
+        </div>
+        <div class="head">
+          <div class="user-image">
+            <img src="<%=require("../../image/user-image.jpg")%>"
+            alt="Пользовательское изображение" />
+          </div>
+          <div class="user-details">
+            <p class="profession">Frontend-разработчик</p>
+            <p class="user-name">Андрей</p>
+          </div>
+        </div>
+        <nav class="nav">
+          <div class="menu">
+            <p class="title">главное</p>
+            <ul>
+              <li class="active">
+                <a href="index.html">
+                  <i class="icon ph ph-house text-purple-900"></i>
+                  <span class="text text-purple-900">Профиль</span>
+                </a>
+              </li>
+              <li>
+                <a href="404.html">
+                  <i class="icon ph ph-chats-circle text-purple-900"></i>
+                  <span class="text text-purple-900">Чаты</span>
+                </a>
+              </li>
+              <li>
+                <a href="404.html">
+                  <i class="icon ph ph-newspaper text-purple-900"></i>
+                  <span class="text text-purple-900">Новости</span>
+                </a>
+              </li>
+              <li>
+                <a href="404.html">
+                  <i
+                    class="icon ph ph-list-magnifying-glass text-purple-900"
+                  ></i>
+                  <span class="text text-purple-900">Поиск чатов</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="404.html">
+                  <i class="icon ph ph-star text-purple-900"></i>
+                  <span class="text text-purple-900">Избранное</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <main class="main">
+      <div class="main-container">
+        <div class="profile">
+          <div class="profile-content">
+            <div class="profile__image-wrapper">
+              <img
+              src="<%=require("../../image/photo_2025-03-02_15-00-27.jpg")%>"
+              alt="Пользовательское изображение" loading="lazy" />
+              <button class="profile-edit-button" id="open-button-edit">
+                Редактировать профиль
+              </button>
+            </div>
+            <div class="about-me">
+              <div class="profile-head">
+                <div class="person-info">
+                  <p class="profile-name">aндрей aлександрович</p>
+                  <p class="profession">Frontend-разработчик</p>
+                </div>
+              </div>
+              <div class="about-me-descrip">
+                <h2 class="title-about-me">Навыки:</h2>
+                <p class="description-about-me">
+                  HTML/CSS/JAVASCRIPT/REACT/GIT/PIXEL-PERFECT/REACT-ROUTER-DOM/WORDPRESS.
+                </p>
+              </div>
+              <div class="about-me-descrip">
+                <h2 class="title-about-me">Ищу:</h2>
+                <p class="description-about-me">
+                  Хорошую компанию со стабильным доходом, с карьерным ростом, с
+                  дружным коллективом, с бесплатным латте и печеньками.
+                </p>
+              </div>
+              <div class="about-me-descrip">
+                <h2 class="title-about-me">Образование:</h2>
+                <p class="description-about-me">
+                  Среднее-специальное, высшее-специальное, сертификат по
+                  веб-разработке.
+                </p>
+              </div>
+              <div class="about-me-descrip">
+                <h2 class="title-about-me">Немного о себе:</h2>
+                <p class="description-about-me">
+                  Родился в городе Воронеж, получил в этом городе школьное,
+                  средне-специальное, высшее-специальное образование. Закончил
+                  курсы яндекс по направлению frontend-разработчик. Люблю
+                  печеньки и латте.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="published-post" autocomplete="off">
+          <div class="published-post__title">
+            <i class="ph ph-note-pencil"></i>
+            <label>Написать пост:</label>
+          </div>
+          <div class="post-content-area">
+            <textarea
+              id="post-text"
+              name="text"
+              class="post-form__textarea"
+              rows="2"
+            ></textarea>
+            <button id="add-post" class="button-add-post" type="submit">
+              Выложить пост
+            </button>
+          </div>
+        </form>
+        <ul class="posts" id="places__list"></ul>
+      </div>
+    </main>
+
+    <div class="popup popup__type-profile-edit">
+      <form action="" class="popup__form">
+        <button class="button-close" id="button-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 32 32"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M2 30L30 2m0 28L2 2"
+            />
+          </svg>
+        </button>
+        <h3 class="popup__form-title">Редактировать профиль</h3>
+        <div class="popup__input-wrapper popup__input-wrapper_type_name">
+          <input
+            type="text"
+            required
+            placeholder="Имя"
+            name="name"
+            id="profile-name"
+          />
+          <label for="profile-name" class="popup__label"></label>
+        </div>
+        <div class="popup__input-wrapper popup__input-wrapper_type_lastname">
+          <input
+            type="text"
+            required
+            placeholder="Фамилия"
+            name="lastname"
+            id="profile-lastname"
+          />
+          <label for="profile-lastname" class="popup__label"></label>
+        </div>
+        <button class="profile-save" type="submit">Сохранить</button>
+      </form>
+    </div>
+
+    <template id="template-post">
+      <li class="post" id="post">
+        <div class="post-head">
+          <div class="post-head-info">
+            <div class="post-image">
+              <img
+                src="../../image/user-image.jpg"
+                alt="изображение пользователя"
+                loading="lazy"
+                id="post-image"
+              />
+            </div>
+            <h3 class="post-name">Андрей</h3>
+          </div>
+          <button class="trash-delete">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 32 32"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M28 6H6l2 24h16l2-24H4m12 6v12m5-12l-1 12m-9-12l1 12m0-18l1-4h6l1 4"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="post-text">
+          <p>Всем привет!</p>
+        </div>
+        <div class="post-reactions-buttons">
+          <button class="button-like">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M4 21h1V8H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2zM20 8h-7l1.122-3.368A2 2 0 0 0 12.225 2H12L7 7.438V21h11l3.912-8.596L22 12v-2a2 2 0 0 0-2-2z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+          <button class="button-dislike">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 3h-1v13h1a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM4 16h7l-1.122 3.368A2 2 0 0 0 11.775 22H12l5-5.438V3H6l-3.937 8.649l-.063.293V14a2 2 0 0 0 2 2z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+          <button class="button-favourites">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453l-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107l-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4l4.536-4.082c.297-.268.406-.686.278-1.065z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+      </li>
+    </template>
+  </body>
+</html>
