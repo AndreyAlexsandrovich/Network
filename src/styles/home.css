@@ -1,4 +1,4 @@
-@import '@components/post/post.css';
+@import '@components/product/product.css';
 @import '@components/popup/popup.css';
 
 .main-container {
@@ -93,56 +93,32 @@
     max-width: 600px;
 }
 
-.published-post__title { 
-    color: #ffffff96;
-    font-weight: 400;
+.button-create-product-wrapper {
+    max-width: 100%;
     display: flex;
-    align-items: center; 
-    gap: 10px; 
-    margin-bottom: 10px; 
+    justify-content: center;
+    text-align: center;
 }
 
-.published-post__title i { 
-    font-size: 18px;
-    color: #ffff;
-}
-
-.published-post__title h3{ 
- font-size: 16px;
- color: #ffff;
-}
-
-.post-content-area {
-    width: 100%;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-}
-
-.button-add-post { 
-    background-color: #4299e1;
-    color: #ffff;
-    cursor: pointer;
-    font-weight: 700;
-    padding: 1px;
-    width: 20%;
-    margin: 6px;
-}
-
-textarea { 
-    width: 80%;
-    height: 100%;
-    padding: 5px;
-    word-break: break-all;
-    white-space: normal;
-    overflow: hidden;
-    resize: none;
-}
-
-textarea:focus { 
-    outline: none;
-}
-
-.posts { 
+.products { 
     height: 100vh;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.create-product {
+    width: 100%;
+    padding: 20px;
+    border: dashed 3px rgba(0, 0, 0, 0.274);
+    color: rgba(0, 0, 0, 0.274);
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.create-product:hover { 
+    border: dashed 3px rgba(0, 0, 0, 0.178);
+    color: rgba(0, 0, 0, 0.178);
 }

@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); 
+const isPord = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: {
@@ -10,9 +11,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
-    publicPath: "",
+    publicPath: isPord ? "/Network/" : "/",
   },
-  mode: "development",
+  mode: isPord ? "production" : "development",
   devServer: {
     static: path.resolve(__dirname, "./dist"),
     compress: true, 
