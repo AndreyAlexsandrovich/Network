@@ -1,21 +1,80 @@
 .product {
-    width: 250px;
-    height: 250px;
     background-color: #ffff;
 }
-.title-wrapper {
+
+.product-container { 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    max-width: 400px;
 }
+
 .title-product {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 0 10px 0;
 }
+
 .image-product-wrapper {
+    max-width: 100%;
+    height: 250px;
+    display: contents;
+    overflow: hidden;
 }
+
 .image-product {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
 }
+
 .description-product-wrapper {
+    padding: 5px 0 0 0;
 }
 .description-product {
+    padding: 0 10px;
 }
+
+.price-product {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.price {
+    color: #000;
+    font-weight: bold;
+}
+
 .buy-product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
 }
 .buy {
+    background-color: #F3D250;
+    color: #000;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color .3s ease-in-out, background-color .4s ease-in-out;
+    padding: 6px;
+    cursor: pointer;
+}
+
+/* effect hover */
+
+.buy:hover { 
+    background-color: #000;
+    color: #F3D250;
+    transition: color .4s ease-in-out, background-color .5s ease-in-out;
 }

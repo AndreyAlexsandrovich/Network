@@ -1,6 +1,6 @@
 .popup {
     background: rgba(0,0,0,0.5); 
-  z-index: 1000; 
+    z-index: 1000; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,13 +13,23 @@
 }
 
 .popup__form {
-    background-color: #ffff;
-    padding: 20px;
+    align-self: center;
+    background-color: #fff;
     border-radius: 6px;
-    display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: end;
+    justify-content: space-between;
+    padding: 20px;
+    width: 350px;
+    max-width: 100%;
+}
+
+.toolbar { 
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 25px 0;
 }
 
 .button-close { 
@@ -34,7 +44,6 @@
 }
 
 .popup__form-title {
-    margin-bottom: 25px;
     font-weight: 700;
     font-size: 24px;
 }
@@ -53,8 +62,24 @@
     margin-bottom: 0;
 }
 
+.popup__input-wrapper_type_image_product { 
+    border-bottom: none;
+}
 
-.profile-save { 
+.popup__label_type_image { 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #4299e1;
+    cursor: pointer;
+    color: #ffff;
+    fill: #ffff;
+    padding: 10px;
+    transition: background-color .2s ease-in-out;
+    font-weight: 700;
+}
+
+.save-button { 
     width: 100%;
     background-color: #4299e1;
     padding: 8px;
@@ -68,4 +93,8 @@
 .profile-save:hover { 
     background-color: #3881bd;
     transition: background-color .1s ease-in-out;
+}
+
+.close { 
+    visibility: hidden;
 }

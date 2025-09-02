@@ -1,11 +1,10 @@
-import initPosts from './scripts/Posts.js';
+// import initPosts from './scripts/Posts.js';
 import initSideBar from './scripts/sidebarButton.js';
-import initPopup from './scripts/popup.js';
-
+// import initPopup from './scripts/popup.js';
+import apiProducts from './scripts/api.js'
 document.addEventListener("DOMContentLoaded", () => { 
     initSideBar();
-    initPosts();
-    initPopup()
+    apiProducts();
 })
 
 import './index.css';
